@@ -1,0 +1,19 @@
+<?php
+$helper = $this->helper('Eloom\AjaxLayeredNav\Helper\Data');
+?>
+<?php if ($helper->enableAjaxLayeredNavigation()) : ?>
+<script type="text/javascript">
+(function() {
+var config = {
+    config: {
+        mixins: {
+            'Magento_Swatches/js/swatch-renderer': {
+                'Eloom_AjaxLayeredNav/js/swatch-renderer': true
+            }
+        }
+    }
+};
+require.config(config);
+})();
+</script>
+<?php endif ?>

@@ -1,0 +1,1 @@
+define(["jquery"],function(a){return function(d){a.widget("mage.SwatchRenderer",d,{_init:function(){this._super();this._EmulateSelected(this._getActiveParams())},_getActiveParams:function(){var b={};a("[data-activefilter]").each(function(c,g){c=a(this).data("activefilter");a.each(c,function(e,f){b[e]=parseInt(f)})});return b}});return a.mage.SwatchRenderer}});

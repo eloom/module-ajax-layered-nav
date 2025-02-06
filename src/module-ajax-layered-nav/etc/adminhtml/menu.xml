@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Eloom_AjaxLayeredNav::menu" parent="Eloom_Core::core" title="Ajax Layered Navigation" translate="title" module="Eloom_AjaxLayeredNav" sortOrder="40" resource="Eloom_AjaxLayeredNav::menu" />
+        <add id="Eloom_AjaxLayeredNav::settings" action="adminhtml/system_config/edit/section/eloom_ajaxlayerednav" parent="Eloom_AjaxLayeredNav::menu" title="Settings" translate="title" module="Eloom_AjaxLayeredNav" sortOrder="10" resource="Eloom_AjaxLayeredNav::settings" />
+    </menu>
+</config>

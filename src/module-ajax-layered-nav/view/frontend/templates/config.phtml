@@ -1,0 +1,24 @@
+<?php
+$helper = $this->helper('Eloom\AjaxLayeredNav\Helper\Data');
+?>
+<?php if ($helper->enableAjaxLayeredNavigation()) : ?>
+<?php
+$widget = [
+    'Eloom_AjaxLayeredNav/js/ajaxlayerednav' => []
+];
+$boxMaxHeight = (int)$helper->getConfig('eloom_ajaxlayerednav/general/box_max_height');
+?>
+<div class="product-list-container" id="product-list-container" data-mage-init='<?= json_encode($widget) ?>'>
+    <?php echo $this->getChildHtml() ?>
+</div>
+<?php if ($boxMaxHeight) : ?>
+<style type="text/css">
+@media(min-width: 768px) {
+.filter-options-content-inner{max-height: <?= $boxMaxHeight ?>px; overflow-y: auto;}
+.filter-options-content-inner .swatch-attribute-options{margin: 0 0 0 0;}
+}
+</style>
+<?php endif ?>
+<?php else : ?>
+<?php echo $this->getChildHtml() ?>
+<?php endif ?>

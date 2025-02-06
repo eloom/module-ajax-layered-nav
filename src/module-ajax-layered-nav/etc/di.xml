@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Category" type="Eloom\AjaxLayeredNav\Model\Layer\Filter\Category" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Attribute" type="Eloom\AjaxLayeredNav\Model\Layer\Filter\Attribute" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Price" type="Eloom\AjaxLayeredNav\Model\Layer\Filter\Price" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Decimal" type="Eloom\AjaxLayeredNav\Model\Layer\Filter\Decimal" />
+    
+    <type name="Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper">
+        <plugin sortOrder="10" name="eloom_ajax_layered_nav_add_data_to_mappers_result" type="Eloom\AjaxLayeredNav\Plugin\Elasticsearch\BatchDataMapper\ProductDataMapper"/>
+    </type>
+    <type name="Magento\Framework\Search\Request\Config\FilesystemReader">
+        <plugin name="eloom_ajax_layered_nav_search_request_config_reader"  type="Eloom\AjaxLayeredNav\Plugin\Elasticsearch\Request\ConfigReader" />
+    </type>
+</config>

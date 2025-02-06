@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="ajax_layered_nav_plugin_category_view" type="Eloom\AjaxLayeredNav\Plugin\Category\View" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Result\Index">
+        <plugin name="ajax_layered_nav_plugin_catalogsearch_result_index" type="Eloom\AjaxLayeredNav\Plugin\CatalogSearch\View" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Eloom\ShopByBrand\Controller\Index\View">
+        <plugin name="ajax_layered_nav_plugin_brand_view" type="Eloom\AjaxLayeredNav\Plugin\Brand\View" sortOrder="10" disabled="false"/>
+    </type>
+    <type name="Magento\LayeredNavigation\Block\Navigation\FilterRenderer">
+        <plugin name="ajax_layered_nav_layered_renderer" type="Eloom\AjaxLayeredNav\Plugin\Navigation\FilterRenderer" sortOrder="0" />
+    </type>
+    <type name="Magento\Catalog\Model\Layer\FilterList">
+        <plugin name="ajax_layered_nav_layer_filterlist" type="Eloom\AjaxLayeredNav\Plugin\Catalog\FilterList" sortOrder="10" />
+    </type>
+    <type name="Magento\Catalog\Model\Config">
+        <plugin name="ajax_layered_nav_catalog_config" type="Eloom\AjaxLayeredNav\Plugin\Catalog\Model\Config" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <plugin name="ajax_layered_nav_catalog_product_toolbar" type="Eloom\AjaxLayeredNav\Plugin\Catalog\Product\ProductList\Toolbar" />
+    </type>
+</config>
